@@ -218,7 +218,7 @@ export const CONTENT: Record<'zh' | 'en', ContentData> = {
       ]
     },
     footer: {
-      rights: "© 2024 Burn Coin Protocol. All Rights Reserved.",
+      rights: "© 2025 Burn Coin Protocol. All Rights Reserved.",
       disclaimer: "DeFi is risky. Please proceed with caution.",
     }
   }
