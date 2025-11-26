@@ -1,57 +1,68 @@
-export type Language = 'CN' | 'EN';
+export type Language = 'zh' | 'en';
 
-export interface Content {
+export interface ICOPhase {
+  stage: string;
+  amount: string;
+  bnbCap: string;
+  rate: string;
+  roi: string;
+}
+
+export interface ContentData {
   nav: {
     home: string;
     vision: string;
     tokenomics: string;
-    mechanism: string;
     ico: string;
+    mechanism: string;
     whitepaper: string;
   };
   hero: {
-    subtitle: string;
     title: string;
-    desc: string;
+    slogan: string;
+    contractLabel: string;
     cta: string;
-    tg: string;
+    telegram: string;
+  };
+  abstract: {
+    title: string;
+    content: string[];
+    quote: string;
   };
   vision: {
     title: string;
-    cards: {
-      title: string;
-      desc: string;
-    }[];
+    description: string;
+    points: string[];
   };
-  stats: {
-    supply: string;
-    supplyLabel: string;
-    tax: string;
-    taxLabel: string;
-    chain: string;
-    chainLabel: string;
-  };
-  mechanism: {
+  tokenomics: {
     title: string;
-    forgeTitle: string;
-    forgeDesc: string;
-    buybackTitle: string;
-    buybackDesc: string;
+    items: { label: string; value: string; note?: string }[];
+    distributionTitle: string;
+    distributionPoints: string[];
   };
   ico: {
     title: string;
-    phases: {
-      phase: string;
-      amount: string;
-      bnb: string;
-      rate: string;
-    }[];
+    description: string;
+    tableHeaders: string[];
+    phases: ICOPhase[];
+    notes: string[];
   };
-  risks: {
+  mechanism: {
     title: string;
-    desc: string;
+    subtitle: string;
+    forgeTitle: string;
+    forgePoints: string[];
+    buybackTitle: string;
+    buybackPoints: string[];
+    securityTitle: string;
+    securityPoints: string[];
+  };
+  risk: {
+    title: string;
+    points: string[];
   };
   footer: {
     rights: string;
-  }
+    disclaimer: string;
+  };
 }

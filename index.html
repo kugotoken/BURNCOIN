@@ -1,60 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Burn Coin (BURN) - The Ultimate Deflationary Protocol</title>
-    <meta name="description" content="BURN is a pure deflationary token on BSC. Burn or be Burned." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Burn Coin (BURN) | The Ultimate On-Chain Deflationary Forge</title>
+    <meta name="description" content="BURN is a pure on-chain deflationary token on BSC. Burn or be Burned." />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
             colors: {
               burn: {
-                red: '#FF4500',
-                orange: '#FF8C00',
-                gold: '#FFD700',
-                dark: '#050505',
-                card: '#111111',
+                black: '#1A1A1A',     // Deep Charcoal
+                dark: '#0F0F0F',      // Almost Black background
+                panel: '#262626',     // Card background
+                gold: '#D4AF37',      // Primary Gold
+                goldDim: '#8A7020',   // Dim Gold for borders
+                champagne: '#F7E7CE', // Light Gold text
+                amber: '#FFBF00',     // Highlight
+                fire: '#801818',      // Deep Red/Fire (minimal use)
               }
             },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Cinzel', 'serif'], // Premium heading font
+            },
             backgroundImage: {
-              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-              'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #FF4500 0deg, #000000 180deg, #FFD700 360deg)',
+              'gold-gradient': 'linear-gradient(135deg, #D4AF37 0%, #AA8929 100%)',
+              'dark-gradient': 'radial-gradient(circle at center, #262626 0%, #0F0F0F 100%)',
             }
           }
         }
       }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
       body {
-        background-color: #050505;
-        color: #ffffff;
+        background-color: #0F0F0F;
+        color: #E5E5E5;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
       }
-      .glass-panel {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Cinzel', serif;
       }
-      .text-gradient {
-        background: linear-gradient(to right, #FF4500, #FFD700);
+      .gold-text {
+        background: linear-gradient(to right, #D4AF37, #F7E7CE, #D4AF37);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-size: 200% auto;
+        animation: shine 5s linear infinite;
+      }
+      @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
       }
     </style>
   <script type="importmap">
 {
   "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.4.1"
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
   }
 }
 </script>
