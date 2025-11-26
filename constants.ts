@@ -1,6 +1,6 @@
 import { ContentData } from './types';
 
-export const CONTRACT_ADDRESS = "0x000000000000000000000000000000"; // Placeholder from PDF
+export const CONTRACT_ADDRESS = "0x18B1EFa66F0d9065557354823c31759105e0E0F1"; // Placeholder from PDF
 export const TELEGRAM_LINK = "https://t.me/BSC_BURN";
 
 export const CONTENT: Record<'zh' | 'en', ContentData> = {
