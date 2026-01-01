@@ -30,7 +30,15 @@ const Header: React.FC<HeaderProps> = ({ lang, setLang, content }) => {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollTo('hero')}>
-          <Flame className="w-8 h-8 text-burn-gold fill-burn-gold/20" />
+          {/* 你的新 SVG 图标 */}
+          <svg 
+            viewBox="0 0 512 512" 
+            xmlns="http://www.w3.org/2000/svg" 
+            className="w-8 h-8 md:w-9 md:h-9 shadow-lg"
+          >
+            <circle cx="256" cy="256" r="220" fill="#D4AF37"/> {/* 这里用了你项目定义的金色 */}
+            <path d="M256 89C310 199 340 279 340 339A84 84 0 1 1 172 339C172 279 202 199 256 89Z" fill="#000000"/>
+          </svg>
           <span className="font-serif font-bold text-xl tracking-wider text-burn-champagne">BURN</span>
         </div>
 
