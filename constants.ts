@@ -194,14 +194,14 @@ export const CONTENT: Record<'zh' | 'en', ContentData> = {
       ],
       buybackTitle: "Perpetual Buyback Burn",
       buybackPoints: [
-        "Foundation uses 100% of ICO + Forge proceeds for open market buybacks (PancakeSwap V3).",
+        "Foundation uses 30% of ICO + Forge proceeds for open market buybacks (PancakeSwap V3).",
         "Bought tokens are immediately sent to 0x000...dead.",
         "No fixed cycle, no floor ratio, no cap.",
         "Every burn is visible on-chain (BscScan)."
       ],
       securityTitle: "Security & Tech",
       securityPoints: [
-        "Contracts deployed & ownership renounced. Code 30% immutable.",
+        "Contracts deployed & ownership renounced. Code 100% immutable.",
         "Liquidity permanently locked in PancakeSwap V3.",
         "No pause, no migration, no hidden backdoors."
       ]
