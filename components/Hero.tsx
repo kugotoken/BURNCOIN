@@ -35,8 +35,18 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
           className="mb-8 inline-block"
         >
           <div className="relative">
-             <div className="absolute inset-0 bg-burn-gold blur-2xl opacity-20 animate-pulse"></div>
-             <Flame className="w-24 h-24 md:w-32 md:h-32 text-burn-gold fill-burn-amber mx-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]" />
+            {/* 背景呼吸灯发光效果 */}
+            <div className="absolute inset-0 bg-burn-gold blur-3xl opacity-30 animate-pulse"></div>
+  
+            {/* 你的新 SVG 图标 */}
+            <svg 
+              viewBox="0 0 512 512" 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="w-24 h-24 md:w-32 md:h-32 mx-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.6)] relative z-10"
+            >
+              <circle cx="256" cy="256" r="220" fill="#D4AF37"/>
+              <path d="M256 89C310 199 340 279 340 339A84 84 0 1 1 172 339C172 279 202 199 256 89Z" fill="#000000"/>
+            </svg>
           </div>
         </motion.div>
 
