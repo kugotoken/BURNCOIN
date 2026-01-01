@@ -40,10 +40,16 @@ const Mechanism: React.FC<MechanismProps> = ({ content }) => {
             <div className="absolute inset-0 bg-gradient-to-br from-burn-gold to-burn-fire opacity-10 blur-2xl"></div>
             <div className="relative h-full bg-[#181818] border border-burn-gold p-8 rounded-2xl shadow-2xl overflow-hidden">
                <div className="absolute top-0 right-0 p-4 opacity-10">
-                 <Flame size={120} />
+                 <svg viewBox="0 0 512 512" width="120" height="120">
+                   <circle cx="256" cy="256" r="220" fill="#D4AF37"/>
+                   <path d="M256 89C310 199 340 279 340 339A84 84 0 1 1 172 339C172 279 202 199 256 89Z" fill="#000000"/>
+                 </svg>
                </div>
-              <div className="w-16 h-16 bg-gradient-to-br from-burn-gold to-burn-amber rounded-xl flex items-center justify-center mb-8 text-black shadow-lg">
-                <Flame size={32} />
+              <div className="w-16 h-16 bg-gradient-to-br from-burn-gold to-burn-amber rounded-xl flex items-center justify-center mb-8 shadow-lg">
+                <svg viewBox="0 0 512 512" className="w-10 h-10">
+                  <circle cx="256" cy="256" r="220" fill="#000000"/> {/* 这里反转了颜色，让它在金色背景上更醒目 */}
+                  <path d="M256 89C310 199 340 279 340 339A84 84 0 1 1 172 339C172 279 202 199 256 89Z" fill="#D4AF37"/>
+                </svg>
               </div>
               <h3 className="text-3xl font-serif text-burn-gold mb-6">{content.buybackTitle}</h3>
               <ul className="space-y-4">
