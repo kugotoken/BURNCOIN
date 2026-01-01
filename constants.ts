@@ -85,7 +85,7 @@ export const CONTENT: Record<'zh' | 'en', ContentData> = {
       ],
       buybackTitle: "永续回购销毁",
       buybackPoints: [
-        "基金会将 ICO 所得 + 所有锻造所得 BNB 的 100% 用于公开市场回购 BURN（主要通过 PancakeSwap V3）。",
+        "基金会将 ICO 所得 + 所有锻造所得 BNB 的 30% 用于公开市场回购 BURN（主要通过 PancakeSwap V3）。",
         "回购后立即发送至 0x000...dead 永久销毁。",
         "无固定周期、无保底比例、无上限。",
         "每笔销毁交易实时链上可见（BscScan 一键查询）。"
@@ -201,7 +201,7 @@ export const CONTENT: Record<'zh' | 'en', ContentData> = {
       ],
       securityTitle: "Security & Tech",
       securityPoints: [
-        "Contracts deployed & ownership renounced. Code 100% immutable.",
+        "Contracts deployed & ownership renounced. Code 30% immutable.",
         "Liquidity permanently locked in PancakeSwap V3.",
         "No pause, no migration, no hidden backdoors."
       ]
