@@ -1,68 +1,73 @@
 export type Language = 'zh' | 'en';
 
-export interface ICOPhase {
-  stage: string;
-  amount: string;
-  bnbCap: string;
-  rate: string;
-  roi: string;
+export interface SectionContent {
+  title: string;
+  subtitle?: string;
+  description: string | string[];
 }
 
-export interface ContentData {
-  nav: {
-    home: string;
-    vision: string;
-    tokenomics: string;
-    ico: string;
-    mechanism: string;
-    whitepaper: string;
-  };
+export interface SeedRoundData {
+  phase: string;
+  amount: string;
+  bnbRaise: string;
+  rate: string;
+  price: string;
+}
+
+export interface DistributionData {
+  name: string;
+  value: number;
+  amount: string;
+  desc: string;
+}
+
+export interface Content {
   hero: {
     title: string;
-    slogan: string;
-    contractLabel: string;
+    tagline: string;
     cta: string;
-    telegram: string;
+    contractLabel: string;
   };
-  abstract: {
+  summary: SectionContent;
+  vision: SectionContent;
+  basics: {
     title: string;
-    content: string[];
-    quote: string;
+    items: { label: string; value: string }[];
   };
-  vision: {
+  distribution: {
     title: string;
-    description: string;
-    points: string[];
+    data: DistributionData[];
   };
-  tokenomics: {
-    title: string;
-    items: { label: string; value: string; note?: string }[];
-    distributionTitle: string;
-    distributionPoints: string[];
-  };
-  ico: {
-    title: string;
-    description: string;
-    tableHeaders: string[];
-    phases: ICOPhase[];
-    notes: string[];
-  };
-  mechanism: {
+  seed: {
     title: string;
     subtitle: string;
-    forgeTitle: string;
-    forgePoints: string[];
-    buybackTitle: string;
-    buybackPoints: string[];
-    securityTitle: string;
-    securityPoints: string[];
+    headers: string[]; // [Phase, Amount, BNB, Rate, Price]
+    data: SeedRoundData[];
+    returns: string[];
+    listingPrice: string;
   };
-  risk: {
+  mechanics: {
     title: string;
-    points: string[];
+    part1: {
+      title: string;
+      desc: string;
+      narrative: string;
+      logic: string;
+    };
+    part2: {
+      title: string;
+      desc: string;
+      narrative: string;
+      mechanism: string;
+    };
+  };
+  value: {
+    title: string;
+    core: string;
+    points: { title: string; desc: string }[];
   };
   footer: {
-    rights: string;
     disclaimer: string;
+    copyright: string;
   };
 }

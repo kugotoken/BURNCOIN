@@ -2,77 +2,75 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <title>Burn Coin (BURN) | The Ultimate On-Chain Deflationary Forge</title>
-    <meta name="description" content="BURN is a pure on-chain deflationary token on BSC. Burn or be Burned." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Burn Coin (BURN)</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Serif+SC:wght@300;500;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              burn: {
-                black: '#1A1A1A',     // Deep Charcoal
-                dark: '#0F0F0F',      // Almost Black background
-                panel: '#262626',     // Card background
-                gold: '#D4AF37',      // Primary Gold
-                goldDim: '#8A7020',   // Dim Gold for borders
-                champagne: '#F7E7CE', // Light Gold text
-                amber: '#FFBF00',     // Highlight
-                fire: '#801818',      // Deep Red/Fire (minimal use)
-              }
+              obsidian: '#050505',
+              gold: '#F3BA2F',
+              'gold-dim': '#8A6818',
             },
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
-              serif: ['Cinzel', 'serif'], // Premium heading font
+              serif: ['"Noto Serif SC"', 'serif'],
+              display: ['Cinzel', 'serif'],
             },
-            backgroundImage: {
-              'gold-gradient': 'linear-gradient(135deg, #D4AF37 0%, #AA8929 100%)',
-              'dark-gradient': 'radial-gradient(circle at center, #262626 0%, #0F0F0F 100%)',
+            animation: {
+              'blob': 'blob 10s infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
             }
           }
         }
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
       body {
-        background-color: #0F0F0F;
-        color: #E5E5E5;
-        font-family: 'Inter', sans-serif;
+        background-color: #000000;
+        color: #ffffff;
         overflow-x: hidden;
       }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Cinzel', serif;
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
       }
-      .gold-text {
-        background: linear-gradient(to right, #D4AF37, #F7E7CE, #D4AF37);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 200% auto;
-        animation: shine 5s linear infinite;
+      ::-webkit-scrollbar-track {
+        background: #000;
       }
-      @keyframes shine {
-        to {
-          background-position: 200% center;
-        }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
       }
-      .scrollbar-hide::-webkit-scrollbar {
-          display: none;
+      ::-webkit-scrollbar-thumb:hover {
+        background: #F3BA2F;
       }
-      .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
+      
+      .text-glow {
+        text-shadow: 0 0 20px rgba(243, 186, 47, 0.3);
       }
     </style>
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
   }
 }
 </script>
