@@ -21,15 +21,15 @@ export const AllocationChart: React.FC<Props> = ({ data }) => {
   const chartData = data.map(d => ({ name: d.name, value: d.value, ...d }));
 
   return (
-    <div className="h-[300px] w-full">
+    <div className="h-full w-full min-h-[250px]">
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
             data={chartData}
             cx="50%"
             cy="50%"
-            innerRadius={60}
-            outerRadius={100}
+            innerRadius="50%"
+            outerRadius="80%"
             paddingAngle={3}
             dataKey="value"
             stroke="none"
